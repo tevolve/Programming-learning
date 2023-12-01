@@ -1,5 +1,5 @@
  // Função para obter o nível do herói com base na quantidade de XP
-function obterNivel(xp) {
+function gteLevel(xp) {
     switch (true) {
         case xp < 1000:
             return "Ferro";
@@ -21,7 +21,7 @@ function obterNivel(xp) {
 }
 
 // Lista de heróis com seus nomes e experiência
-const herois = [
+const heroes = [
         {"name": "H1", "xp": 1000},
         {"name": "H2", "xp": 2000},
         {"name": "H3", "xp": 5000},
@@ -33,14 +33,14 @@ const herois = [
     ];
     
 // Loop for para processar cada herói na lista
-for (let i = 0; i < herois.length; i++) {
-    const heroi = herois[i];
-    const name = heroi.name;
-    const xp = heroi.xp;
+for (let i = 0; i < heroes.length; i++) {
+    const hero = heroes[i];
+    const name = hero.name;
+    const xp = hero.xp;
 
     // Chama a função para obter o nível do herói
-    const nivel = obterNivel(xp);
+    const level = getLevel(xp);
 
     // Exibe a mensagem com o nome do herói e o nível alcançado
-    console.log(`O Herói de nome ${name} está no nível de ${nivel}`);
+    console.log(`O Herói de nome ${name} está no nível de ${level}`);
 }
